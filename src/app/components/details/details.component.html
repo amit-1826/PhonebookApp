@@ -1,0 +1,40 @@
+<h3>Contact Details</h3>
+<hr/>
+<img [src]="contact.picture" alt="" style="height: 100px; width: 100px;">
+<!-- <img src="{{contact.picture}}" alt="" style="height: 100px; width: 100px;"> -->
+<div class="row">
+  <div class="col-sm-4">First Name</div>
+  <div class="col-sm-8">
+    {{contact.gender === "Male" ? "Mr" : "Ms"}}
+    {{contact.firstName}} {{contact.lastName}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">Phone</div>
+  <div class="col-sm-8">{{contact.phone}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">Email</div>
+  <div class="col-sm-8">{{contact.email}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">Gender</div>
+  <div class="col-sm-8">{{contact.gender}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">Date of birth</div>
+  <div class="col-sm-4">{{contact.dob | age : 2}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">City</div>
+  <div class="col-sm-8">{{contact.city}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">State</div>
+  <div class="col-sm-8">{{contact.state}}</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">Country</div>
+  <div class="col-sm-8">{{contact.country}}</div>
+</div>
+
+<button class="btn btn-danger" (click)="deleteContact()">Delete</button>

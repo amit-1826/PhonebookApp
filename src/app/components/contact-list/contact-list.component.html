@@ -1,0 +1,41 @@
+<h3>List of all contacts</h3>
+<hr />
+<input
+  type="text"
+  class="form-control"
+  id="searchInput"
+  placeholder="Enter your search terms here..."
+  [(ngModel)]="searchInput"
+/>
+<br />
+<div class="list-group">
+  <div *ngFor="let contact of contacts" class="list-group-item">
+    <div *ngFor="let contact of contacts" class="list-group-item">
+      <div class="row">
+        <div class="col-sm-4">
+          <img
+            [src]="contact.picture"
+            alt=""
+            style="height: 100px; width: 100px;"
+          />
+        </div>
+        <div class="col-sm-8">
+          <h4>
+            <a [routerLink]="['/contacts-details', contact.id]"
+              >{{ contact.gender === "Male" ? "Mr" : "Ms" }}
+              {{ contact.firstName }} {{ contact.lastName }}</a
+            >
+          </h4>
+          <p>Phone: {{ contact.phone }}</p>
+          <p>City: {{ contact.city }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input
+    class="btn btn-primary btn-block"
+    type="button"
+    (click)="loadMore()"
+    value="Load More..."
+  />
+</div>
