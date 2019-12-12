@@ -1,19 +1,6 @@
 {
   "contacts": [
     {
-      "id": 11,
-      "firstName": "Katya",
-      "lastName": "Carrier",
-      "email": "kcarriera@virginia.edu",
-      "gender": "Female",
-      "phone": "9152386093",
-      "dob": "5/15/2018",
-      "city": "El Paso",
-      "state": "Texas",
-      "country": "United States",
-      "picture": "http://dummyimage.com/100x100.png/dddddd/000000"
-    },
-    {
       "id": 12,
       "firstName": "Inge",
       "lastName": "Ioselevich",
@@ -1193,6 +1180,41 @@
       "state": "gujarat",
       "country": "india",
       "id": 102
+    },
+    {
+      "gender": "Male",
+      "firstName": "Amit",
+      "lastName": "Dubey",
+      "phone": "122321323",
+      "email": "amitdubey1826@gmail.com",
+      "city": "Surat",
+      "state": "Gujarat",
+      "country": "India",
+      "dob": "2019-12-02",
+      "id": 103
+    },
+    {
+      "gender": "Male",
+      "firstName": "Amit",
+      "lastName": "Dubey",
+      "phone": "09727897874",
+      "email": "amitdubey1826@gmail.com",
+      "city": "Surat",
+      "state": "Surat",
+      "country": "Surat",
+      "id": 104
+    },
+    {
+      "gender": "Male",
+      "firstName": "qwer",
+      "lastName": "asas",
+      "phone": "123123123",
+      "email": "qwer",
+      "dob": "2019-12-11",
+      "city": "wq",
+      "state": "rt",
+      "country": "gh",
+      "id": 105
     }
   ]
 }

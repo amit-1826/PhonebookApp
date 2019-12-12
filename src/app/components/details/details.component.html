@@ -1,6 +1,6 @@
 <h3>Contact Details</h3>
 <hr/>
-<img [src]="contact.picture" alt="" style="height: 100px; width: 100px;">
+<img src="{{contact.gender === 'Male' ? '../../assets/male.png' : '../../assets/female.png'}}" alt="" style="height: 100px; width: 150px;">
 <!-- <img src="{{contact.picture}}" alt="" style="height: 100px; width: 100px;"> -->
 <div class="row">
   <div class="col-sm-4">First Name</div>
@@ -21,7 +21,7 @@
   <div class="col-sm-8">{{contact.gender}}</div>
 </div>
 <div class="row">
-  <div class="col-sm-4">Date of birth</div>
+  <div class="col-sm-4">Age</div>
   <div class="col-sm-4">{{contact.dob | age : 2}}</div>
 </div>
 <div class="row">

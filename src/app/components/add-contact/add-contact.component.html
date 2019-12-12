@@ -1,52 +1,145 @@
 <h3>Add a new contact</h3>
-<hr/>
-<form action="" class="form">
+<hr />
+<form action="" class="form" #f1="ngForm">
   <div class="form-group">
     <label for="firstname">First Name</label>
-    <input type="text" class="form-control" id="firstname" name="firstName" [(ngModel)]="contact.firstName">
+    <input
+      type="text"
+      class="form-control"
+      required
+      minlength="3"
+      maxlength="15"
+      id="firstname"
+      #firstname="ngModel"
+      name="firstName"
+      [(ngModel)]="contact.firstName"
+    />
+  </div>
+
+  <div class="err" *ngIf="firstname.dirty && firstname.invalid">
+    <div *ngIf="firstname.errors.required">
+      First name is required
+    </div>
+    <div *ngIf="firstname.errors.minlength">
+      Minimum 3 characters are allowed.
+    </div>
   </div>
 
   <div class="form-group">
-      <label for="lastname">Last Name</label>
-      <input type="text" class="form-control" id="lastname" name="lastName" [(ngModel)]="contact.lastName">
-  </div>
-  
-  <div class="form-group">
-      <label>Gender</label>
-      <label for="genderMale"><input type="radio" name="gender" id="genderMale" value="Male" [(ngModel)]="contact.gender">Male</label>
-      <label for="genderFemale"><input type="radio" name="gender" value="Female" id="genderFemale" [(ngModel)]="contact.gender">Female</label>
-  </div>
-
-  <div class="form-group">
-      <label for="lastname">Phone</label>
-      <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="contact.phone">
+    <label for="lastname">Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lastname"
+      name="lastName"
+      [(ngModel)]="contact.lastName"
+    />
   </div>
 
   <div class="form-group">
-      <label for="lastname">Email</label>
-      <input type="text" class="form-control" id="email" name="email" [(ngModel)]="contact.email">
+    <label>Gender</label>
+    <label for="genderMale"
+      ><input
+        type="radio"
+        name="gender"
+        id="genderMale"
+        value="Male"
+        [(ngModel)]="contact.gender"
+      />Male</label
+    >
+    <label for="genderFemale"
+      ><input
+        type="radio"
+        name="gender"
+        value="Female"
+        id="genderFemale"
+        [(ngModel)]="contact.gender"
+      />Female</label
+    >
   </div>
 
   <div class="form-group">
-      <label for="lastname">Date of birth</label>
-      <input type="date" class="form-control" id="dob" name="dob" [(ngModel)]="contact.dob">
+    <label for="phone">Phone</label>
+    <input
+      type="text"
+      #phone="ngModel"
+      required
+      class="form-control"
+      id="phone"
+      name="phone"
+      [(ngModel)]="contact.phone"
+    />
   </div>
 
   <div class="form-group">
-      <label for="lastname">City</label>
-      <input type="text" class="form-control" id="city" name="city" [(ngModel)]="contact.city">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      #email="ngModel"
+      required
+      class="form-control"
+      id="email"
+      name="email"
+      [(ngModel)]="contact.email"
+    />
+  </div>
+
+  <div class="err" *ngIf="email.dirty && email.invalid">
+    <div *ngIf="email.errors.required">
+      Email is required
+    </div>
   </div>
 
   <div class="form-group">
-      <label for="lastname">State</label>
-      <input type="text" class="form-control" id="state" name="city" [(ngModel)]="contact.state">
+    <label for="lastname">Date of birth</label>
+    <input
+      type="date"
+      class="form-control"
+      id="dob"
+      name="dob"
+      [(ngModel)]="contact.dob"
+    />
   </div>
 
   <div class="form-group">
-    <label for="lastname">Country</label>
-    <input type="text" class="form-control" id="country" name="city" [(ngModel)]="contact.country">
-</div>
+    <label for="city">City</label>
+    <input
+      type="text"
+      class="form-control"
+      id="city"
+      name="city"
+      [(ngModel)]="contact.city"
+    />
+  </div>
 
-<button type="submit" class="btn btn-primary" (click)="addContact()">Add</button> 
+  <div class="form-group">
+    <label for="state">State</label>
+    <input
+      type="text"
+      class="form-control"
+      id="state"
+      name="city"
+      [(ngModel)]="contact.state"
+    />
+  </div>
 
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input
+      type="text"
+      class="form-control"
+      id="country"
+      name="city"
+      [(ngModel)]="contact.country"
+    />
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="f1.invalid"
+    class="btn btn-{{ f1.invalid ? 'danger' : 'primary' }}"
+    (click)="addContact()"
+  >
+    Add
+  </button>
 </form>

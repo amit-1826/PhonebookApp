@@ -20,7 +20,6 @@ export class AddContactComponent implements OnInit {
 
   addContact() {
     this.service.addNewContact(this.contact).subscribe(contact => {
-      console.log("Added contact id: ", contact.id);
       this.router.navigate(['/contacts-details', contact.id]);
     })
   }
