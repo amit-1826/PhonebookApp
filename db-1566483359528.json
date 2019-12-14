@@ -1221,18 +1221,6 @@
       "state": "Delaware",
       "country": "United States",
       "picture": "http://dummyimage.com/100x100.png/cc0000/ffffff"
-    },
-    {
-      "gender": "Male",
-      "firstName": "Amit",
-      "lastName": "Dubey",
-      "phone": "3982173892",
-      "email": "amit@gmail.com",
-      "dob": "2019-05-08",
-      "city": "surat",
-      "state": "gujarat",
-      "country": "india",
-      "id": 101
     }
   ]
 }

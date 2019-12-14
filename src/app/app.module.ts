@@ -13,6 +13,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
     ContactListComponent,
     NotfoundComponent,
     SearchPipe,
-    AddContactComponent
+    AddContactComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,

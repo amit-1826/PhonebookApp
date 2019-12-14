@@ -1,19 +1,6 @@
 {
   "contacts": [
     {
-      "id": 12,
-      "firstName": "Inge",
-      "lastName": "Ioselevich",
-      "email": "iioselevichb@de.vu",
-      "gender": "Female",
-      "phone": "5741182639",
-      "dob": "9/16/2018",
-      "city": "South Bend",
-      "state": "Indiana",
-      "country": "United States",
-      "picture": "http://dummyimage.com/100x100.jpg/cc0000/ffffff"
-    },
-    {
       "id": 13,
       "firstName": "Immanuel",
       "lastName": "Twomey",

@@ -9,11 +9,18 @@
 />
 <br />
 <div class="list-group">
-  <div *ngFor="let contact of (contacts | search : searchInput)" class="list-group-item">
+  <div
+    *ngFor="let contact of contacts | search: searchInput"
+    class="list-group-item"
+  >
     <div class="row">
       <div class="col-sm-4">
         <img
-          src="{{contact.gender === 'Male' ? '../../assets/male.png' : '../../assets/female.png'}}"
+          src="{{
+            contact.gender === 'Male'
+              ? '../../assets/male.png'
+              : '../../assets/female.png'
+          }}"
           alt=""
           style="height: 100px; width: 150px;"
         />
@@ -31,9 +38,9 @@
     </div>
   </div>
 </div>
-<input
+<!-- <input
   class="btn btn-primary btn-block"
   type="button"
   (click)="loadMore()"
   value="Load More..."
-/>
+/> -->

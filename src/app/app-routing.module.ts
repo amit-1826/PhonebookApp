@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ContainerComponent } from './components/container/container.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'addcontact', component: AddContactComponent
+  },
+  {
+    path: 'edit-contact/:id', component: EditContactComponent
   },
   {
     path: '**', component: NotfoundComponent

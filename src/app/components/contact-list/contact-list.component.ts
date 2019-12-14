@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { PhonebookService } from "src/app/services/phonebook.service";
 import { Contact } from "src/app/contact";
 
+const $ = window["jQuery"];
 @Component({
   selector: "app-contact-list",
   templateUrl: "./contact-list.component.html",
@@ -17,6 +18,14 @@ export class ContactListComponent implements OnInit {
     this.phonebookService
       .getAllContacts()
       .subscribe(response => (this.contacts = response));
+
+    $(window).scroll(() => {
+      let d = $(document);
+      let w = $(window);
+      if (w.scrollTop() + w.height() === d.height()) {
+        this.loadMore();
+      }
+    });
   }
 
   loadMore() {
