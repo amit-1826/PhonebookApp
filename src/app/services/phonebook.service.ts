@@ -3,7 +3,7 @@ import { Contact } from '../contact';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:4300/contacts/';
+const baseUrl = 'http://31.220.61.10:4300/contacts/';
 
 @Injectable({
   providedIn: 'root'
