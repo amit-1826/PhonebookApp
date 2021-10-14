@@ -3,7 +3,7 @@ import { Contact } from '../contact';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://31.220.61.10:4300/contacts/';
+const baseUrl = 'http://31.220.20.33:4300/contacts/';
 
 @Injectable({
   providedIn: 'root'
@@ -30,8 +30,8 @@ export class PhonebookService {
 
   getAllContacts(pageNumber: number = 1): Observable<any> {
     const params = {
-      '_page': ''+pageNumber
+      '_page': '' + pageNumber
     }
-    return this.httpService.get(baseUrl, {params});
+    return this.httpService.get(baseUrl, { params });
   }
 }
